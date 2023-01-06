@@ -15,28 +15,34 @@
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
+          <h3>Select your preferences below</h3>
         </div>
 
-        <div>
           <div>
-            <input type="radio" name="lowercase" id="lc">
-            <label for="lc">Lowercase Characters</label>
+            <label for="yes_no_radio_lc">Do you want <b>Lowercase Characters</b>?</label>
+            <p><input type="radio" name="yes_no_lc" id="lc">Yes</input></p>
+            <p><input type="radio" name="yes_no_lc">No</input></p>
           </div>
           <div>
-            <input type="radio" name="lowercase" id="uc">
-            <label for="uc">Uppercase Characters</label>
+            <label for="yes_no_radio_uc">Do you want <b>Uppercase Characters</b>?</label>
+            <p><input type="radio" name="yes_no_uc" id="uc">Yes</input></p>
+            <p><input type="radio" name="yes_no_uc">No</input></p>
           </div>
           <div>
-            <input type="radio" name="lowercase" id="nr">
-            <label for="nr">Nunbers</label>
+            <label for="yes_no_radio_nr">Do you want <b>Numeric Characters</b>?</label>
+            <p><input type="radio" name="yes_no_nr" id="nr">Yes</input></p>
+            <p><input type="radio" name="yes_no_nr">No</input></p>
           </div>
           <div>
-            <input type="radio" name="lowercase" id="sc">
-            <label for="sc">Special Characters</label>
+            <label for="yes_no_radio_sc">Do you want <b>Special Characters</b>?</label>
+            <p><input type="radio" name="yes_no_sc" id="sc">Yes</input></p>
+            <p><input type="radio" name="yes_no_sc">No</input></p>
           </div>
-        </div>
-        <div class="slideSelector">
-          <input type="range" min="10" max="64" value="37" class="slider" id="RangeSelector">
+          <p>Please select your desired length. Please keep in mind that the minimum length is 10 characters and the maximum is 64 characters.</p>
+          <div class="slider">
+            10<input type="range" min="10" max="64" value="37" oninput="rangeValue.innerText = this.value">64
+            <p>You selected: </p><p id="rangeValue">37</p>
+            </div>
         </div>
         <div class="card-body">
           <textarea
