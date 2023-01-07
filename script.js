@@ -121,7 +121,6 @@ let specialsCheckbox = document.querySelector("input[name=specials]");
     }
   })
 
-console.log(rangeValue.innerText)
 // Function for getting a random element from an array
 function getRandom() {
   for(i=0;i<bigArray.length;i++){
