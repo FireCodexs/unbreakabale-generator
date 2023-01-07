@@ -18,32 +18,24 @@
           <h3>Select your preferences below</h3>
         </div>
 
-          <div>
-            <label for="yes_no_radio_lc">Do you want <b>Lowercase Characters</b>?</label>
-            <p><input type="radio" name="yes_no_lc" id="lc">Yes</input></p>
-            <p><input type="radio" name="yes_no_lc">No</input></p>
-          </div>
-          <div>
-            <label for="yes_no_radio_uc">Do you want <b>Uppercase Characters</b>?</label>
-            <p><input type="radio" name="yes_no_uc" id="uc">Yes</input></p>
-            <p><input type="radio" name="yes_no_uc">No</input></p>
-          </div>
-          <div>
-            <label for="yes_no_radio_nr">Do you want <b>Numeric Characters</b>?</label>
-            <p><input type="radio" name="yes_no_nr" id="nr">Yes</input></p>
-            <p><input type="radio" name="yes_no_nr">No</input></p>
-          </div>
-          <div>
-            <label for="yes_no_radio_sc">Do you want <b>Special Characters</b>?</label>
-            <p><input type="radio" name="yes_no_sc" id="sc">Yes</input></p>
-            <p><input type="radio" name="yes_no_sc">No</input></p>
-          </div>
+        <div class=checkboxes>
+          <p>Tick for <b>Lowercased Characters</b>.</p>
+          <input type="checkbox" name="lowercase" />
+          <p>Tick for <b>Upercased Characters</b>.</p>
+          <input type="checkbox" name="uppercase" />
+          <p>Tick for <b>Numeric Characters</b>.</p>
+          <input type="checkbox" name="numbers" />
+          <p>Tick for <b>Special Characters</b>.</p>
+          <input type="checkbox" name="specials" />
+        </div>
+
           <p>Please select your desired length. Please keep in mind that the minimum length is 10 characters and the maximum is 64 characters.</p>
           <div class="slider">
             10<input type="range" min="10" max="64" value="37" oninput="rangeValue.innerText = this.value">64
             <p>You selected: </p><p id="rangeValue">37</p>
             </div>
         </div>
+
         <div class="card-body">
           <textarea
             readonly
