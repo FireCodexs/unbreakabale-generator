@@ -104,7 +104,6 @@ let specialsCheckbox = document.querySelector("input[name=specials]");
     if(this.checked) {
       bigArray = bigArray.concat(lowerCasedCharacters)
     }
-    console.log(bigArray)
   })
   uppercaseCheckbox.addEventListener('click', function(){
     if(this.checked) {
