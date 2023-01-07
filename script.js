@@ -91,6 +91,7 @@ var upperCasedCharacters = [
 //Here we will store the values of the user preferences
 var bigArray = []; //This is going to store the user preferences for the password
 var randomArray = []; //This is going to store the randomly assinged elements of the password
+let pass; //This is going to store the password
 let lowercaseCheckbox = document.querySelector("input[name=lowercase]");
 let uppercaseCheckbox = document.querySelector("input[name=uppercase]");
 let numbersCheckbox = document.querySelector("input[name=numbers]");
@@ -125,14 +126,17 @@ console.log(rangeValue.innerText)
 // Function for getting a random element from an array
 function getRandom() {
   for(i=0;i<bigArray.length;i++){
-    randomArray.push(bigArray[Math.floor(Math.random() * bigArray.length + 1)]);//this will give us a random number that we will use to index
+    randomArray.push(bigArray[Math.floor(Math.random() * bigArray.length)]);//this will give us a random number that we will use to index
   }
-  console.log(randomArray)
+  return randomArray
 }
-getRandom();
-// Function to generate password with user input
-function generatePassword() {
 
+// Function to generate password with user input
+// Here we will asign the first X elements of the randomly created array. X stands for rangeValue.innerText
+function generatePassword() {
+  pass = randomArray.slice(0, rangeValue.innerText)//As the assigned password, we will use the users chosen's length to slice the array.
+  let join = pass.join("");//This will transform the array into a string and remove it's commas
+  return join;
 }
 
 // Get references to the #generate element
