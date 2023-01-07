@@ -106,17 +106,17 @@ let specialsCheckbox = document.querySelector("input[name=specials]");
     }
     console.log(bigArray)
   })
-  uppercaseCheckbox.addEventListener('change', function(){
+  uppercaseCheckbox.addEventListener('click', function(){
     if(this.checked) {
       bigArray = bigArray.concat(upperCasedCharacters)
     }
   })
-  numbersCheckbox.addEventListener('change', function(){
+  numbersCheckbox.addEventListener('click', function(){
     if(this.checked) {
       bigArray = bigArray.concat(numericCharacters)
     }
   })
-  specialsCheckbox.addEventListener('change', function(){
+  specialsCheckbox.addEventListener('click', function(){
     if(this.checked) {
       bigArray = bigArray.concat(specialCharacters)
     }
@@ -130,8 +130,6 @@ function getRandom() {
   }
   return randomArray
 }
-
-// Function to generate password with user input
 // Here we will asign the first X elements of the randomly created array. X stands for rangeValue.innerText
 function generatePassword() {
   pass = randomArray.slice(0, rangeValue.innerText)//As the assigned password, we will use the users chosen's length to slice the array.
@@ -144,9 +142,9 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
+  getRandom();
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
-
   passwordText.value = password;
 }
 
